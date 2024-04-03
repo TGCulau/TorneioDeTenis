@@ -4,6 +4,12 @@
     {
         static void Main(string[] args)
         {
+            int cont = Input();
+            int resultado = Equacao(cont);
+            Resultado(resultado);
+        }
+        private static int Input()
+        {
             int cont = 0, aux = 0;
             while (aux < 6)
             {
@@ -21,6 +27,11 @@
                     cont++;
                 }
             }
+
+            return cont;
+        }
+        private static int Equacao(int cont)
+        {
             int resultado = 0;
             if (cont == 1 || cont == 2)
             {
@@ -38,6 +49,11 @@
             {
                 resultado = -1;
             }
+
+            return resultado;
+        }
+        private static void Resultado(int resultado)
+        {
             Console.Clear();
             Console.Write(resultado);
             Console.ReadLine();
